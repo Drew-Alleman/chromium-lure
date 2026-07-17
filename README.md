@@ -8,6 +8,7 @@ Generates realistic fake Windows 11 credential prompts for red teaming and secur
 - Native-looking Windows 11 prompts (Light & Dark mode)
 - Fully customizable message and icon
 - Configurable callback URL for credential exfiltration
+- optional prefilled username
 
 
 For more information read the blog post: https://drewalleman.xyz/red-teaming/2026/07/16/2026-creating-fake-windows-11-credential-popups-with-google-and-edge
