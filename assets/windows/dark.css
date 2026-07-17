@@ -1,0 +1,184 @@
+:root {
+  /* ---- Windows 11 Fluent dark tokens (WinUI names in comments) ---- */
+  --dialog-bg: #202020;
+  --footer-bg: #1a1a1a;
+  --footer-border: rgba(255, 255, 255, 0.06);
+  --control-fill: rgba(255, 255, 255, 0.0605);
+  --control-fill-hover: rgba(255, 255, 255, 0.0837);
+  --control-stroke: rgba(255, 255, 255, 0.0698);
+  --control-stroke-bottom: rgba(255, 255, 255, 0.5442);
+  --strong-stroke: rgba(255, 255, 255, 0.5442);
+  --checkbox-fill: rgba(0, 0, 0, 0.10);
+  --checkbox-fill-hover: rgba(0, 0, 0, 0.06);
+  --accent: #60cdff;
+  --accent-hover: rgba(96, 205, 255, 0.9);
+  --text-primary: #ffffff;
+  --dialog-w: 456px;
+  --ui-scale: 1;
+  --pad-x: 24px;
+  --field-gap: 20px;
+  --input-h: 32px;
+  --btn-h: 32px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { zoom: var(--ui-scale); }
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  font-family: "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  background: var(--footer-bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dialog {
+  width: 100%;
+  max-width: var(--dialog-w);
+  height: 100vh;
+  background: var(--dialog-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 14px var(--pad-x) 20px;
+}
+
+.title {
+  font-family: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.field { margin-bottom: var(--field-gap); }
+
+.field label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.field input[type="text"],
+.field input[type="password"] {
+  width: 100%;
+  height: var(--input-h);
+  background: var(--control-fill);
+  border: 1px solid var(--control-stroke);
+  border-bottom-color: var(--control-stroke-bottom);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0 12px;
+  outline: none;
+  caret-color: var(--text-primary);
+  transition: background 0.1s ease;
+}
+
+.field input:hover { background: var(--control-fill-hover); }
+
+.field input:focus {
+  background: rgba(30, 30, 30, 0.7);
+  border-color: var(--control-stroke);
+  border-bottom: 2px solid var(--accent);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.remember input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--strong-stroke);
+  border-radius: 4px;
+  background: var(--checkbox-fill);
+  cursor: default;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.remember input[type="checkbox"]:hover {
+  background: var(--checkbox-fill-hover);
+}
+
+.remember input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.remember input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px; top: 2px;
+  width: 5px; height: 10px;
+  border: solid #000000;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.remember label {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-primary);
+  cursor: default;
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  padding: 20px var(--pad-x);
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
+}
+
+.btn {
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  height: var(--btn-h);
+  border-radius: 4px;
+  cursor: default;
+}
+
+.btn-ok {
+  background: var(--accent);
+  color: #000000;
+  border: 1px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.40);
+}
+
+.btn-ok:hover { background: var(--accent-hover); }
+
+.btn-cancel {
+  background: var(--control-fill);
+  color: var(--text-primary);
+  border: 1px solid var(--control-stroke);
+  border-top-color: rgba(255, 255, 255, 0.093);
+  border-bottom-color: rgba(0, 0, 0, 0.18);
+}
+
+.btn-cancel:hover { background: var(--control-fill-hover); }
