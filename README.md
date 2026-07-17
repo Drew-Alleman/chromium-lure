@@ -1,7 +1,27 @@
+
 # Chromium Lure
 Generates realistic fake Windows 11 credential prompts for red teaming and security research.
+
+<img width="1618" height="919" alt="cred_prompt_demo" src="https://github.com/user-attachments/assets/9b2ca224-97b2-4cfc-b224-4cf45952f942" />
 
 ## Features
 - Native-looking Windows 11 prompts (Light & Dark mode)
 - Fully customizable message and icon
 - Configurable callback URL for credential exfiltration
+
+
+For more information read the blog post: 
+
+Example on how to launch chrome with the generated login form:
+```
+$chromeArgs = @(
+    '--app="C:\Users\drew\Downloads\login.html"'
+    '--window-size=440,460'
+    '--force-app-mode'
+    '--disable-infobars'
+    '--noerrdialogs'
+    '--user-data-dir="C:\temp\winprompt"'
+)
+
+Start-Process -FilePath chrome.exe -ArgumentList $chromeArgs
+```
