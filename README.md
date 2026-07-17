@@ -31,3 +31,5 @@ Start-Process -FilePath chrome.exe -ArgumentList $chromeArgs
 Also showcasing a custom favicon and title: <br>
 <img width="447" height="403" alt="image" src="https://github.com/user-attachments/assets/a0e969a6-76a3-4bd4-b184-62b3a8bb5325" />
 
+## Additional References
+- https://mrd0x.com/phishing-with-chromium-application-mode/
