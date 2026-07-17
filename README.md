@@ -1,6 +1,6 @@
 
 # Chromium Lure
-Generates realistic fake Windows 11 credential prompts for red teaming and security research.
+Generates realistic fake Windows 11 credential prompts for phishing credentials from compromised machines during authorized engagements. 
 
 <img width="1618" height="919" alt="cred_prompt_demo" src="https://github.com/user-attachments/assets/9b2ca224-97b2-4cfc-b224-4cf45952f942" />
 
