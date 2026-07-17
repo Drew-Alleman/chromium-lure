@@ -10,7 +10,7 @@ Generates realistic fake Windows 11 credential prompts for red teaming and secur
 - Configurable callback URL for credential exfiltration
 
 
-For more information read the blog post: 
+For more information read the blog post: https://drewalleman.xyz/red-teaming/2026/07/16/2026-creating-fake-windows-11-credential-popups-with-google-and-edge
 
 ## Launching Chrome
 Example on how to launch chrome with the generated login form:
