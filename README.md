@@ -12,6 +12,7 @@ Generates realistic fake Windows 11 credential prompts for red teaming and secur
 
 For more information read the blog post: 
 
+## Launching Chrome
 Example on how to launch chrome with the generated login form:
 ```
 $chromeArgs = @(
@@ -25,3 +26,7 @@ $chromeArgs = @(
 
 Start-Process -FilePath chrome.exe -ArgumentList $chromeArgs
 ```
+## Light mode Example
+Also showcasing a custom favicon and title: <br>
+<img width="447" height="403" alt="image" src="https://github.com/user-attachments/assets/a0e969a6-76a3-4bd4-b184-62b3a8bb5325" />
+
